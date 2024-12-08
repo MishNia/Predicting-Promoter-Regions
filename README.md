@@ -35,6 +35,8 @@ Model performance is assessed using:
 ## Repository Structure
 
 The repository is organized as follows:
+
+```bash
 ├── mouse.ipynb # Notebook for mouse promoter sequence analysis 
 ├── human.ipynb # Notebook for human promoter sequence analysis 
 ├── data
@@ -45,6 +47,7 @@ The repository is organized as follows:
         ├── nonTATA # mouse non TATA protein sequences 
         ├── TATA#  mouse TATA protein sequences 
 ├── README.md # Documentation for the repository
+```
 
 ## Notebooks
 
