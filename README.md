@@ -25,6 +25,12 @@ The model combines the strengths of:
   - **Negative Examples**: Non-promoter sequences sampled from regions unlikely to contain promoters, with controlled noise introduced for realism.
 - Sequences are standardized to a length of 300 base pairs using truncation and padding.
 - One-hot encoding is applied to represent nucleotide sequences (`A`, `T`, `G`, `C`) as binary vectors.
+- Procedure for create negative dataset as described in paper:
+- Divide the Protein Sequence: Split the protein sequence into N segments (e.g., 20 segments, as mentioned in the paper).
+- Select Segments to Retain: Randomly select M segments from the original sequence to retain as-is. Replace the remaining segments with randomly initialized values.
+- Combine Positive and Negative Batches: During each training iteration, mix batches of positive samples with these generated negative samples, and proceed with training.
+
+![Negative Set](negative-set.png)
 
 ### 3. **Evaluation Metrics**
 Model performance is assessed using:
